@@ -9,7 +9,7 @@ faceCascade = cv2.CascadeClassifier(
 )
 
 def get_images_and_labels(datapath):
-    image_paths = [os.path.join(datapath, f) for f in os.listdir(datapath)]
+    image_paths = [os.path.join(datapath, f) for f in os.listdir(datapath) if not f.startswith(".")]
 
     images = []
 
